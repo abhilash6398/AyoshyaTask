@@ -9,7 +9,7 @@ export class PeopleService {
   constructor(private _httpClient: HttpClient){ }
 
   public peoplelist() {
-    return this._httpClient.get('https://services.odata.org/TripPinRESTierService/People');
+    return this._httpClient.get('https://services.odata.org/TripPinRESTierService/');
   }
 
 
