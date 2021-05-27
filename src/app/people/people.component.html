@@ -1,0 +1,41 @@
+<div class="container">
+  <table  ngIf="peoplelist" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>MiddleName</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Emails</th>
+        <th>FavoriteFeature</th>
+        <th>Features</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Name</th>
+        <th>CountryRegion</th>
+        <th>Region</th>
+        <th>HomeAddress</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let people of peoplelist;">
+      <tr>
+        <td>{{people.UserName}}</td>
+        <td>{{people.FirstName}}</td>
+        <td>{{people.LastName}}</td>
+        <td>{{people.MiddleName}}</td>
+        <td>{{people.Gender}}</td>
+        <td>{{people.Age}}</td>
+        <td>{{people.Emails}}</td>
+        <td>{{people.FavoriteFeature}}</td>
+        <td>{{people.Features}}</td>
+        <td>{{people.AddressInfo.Address}}</td>
+        <td>{{people.AddressInfo.City.Name}}</td>
+        <td>{{people.AddressInfo.City.CountryRegion}}</td>
+        <td>{{people.AddressInfo.City.Region}}</td>
+        <td>{{people.HomeAddress}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

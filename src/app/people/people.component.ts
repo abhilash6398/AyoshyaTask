@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { PeopleService } from '../services/people.service';
+
+@Component({
+  selector: 'app-people',
+  templateUrl: './people.component.html',
+  styleUrls: ['./people.component.css']
+})
+export class PeopleComponent implements OnInit {
+  peoplelist:any=[];
+
+  constructor(private _peopleService: PeopleService) { }
+
+  ngOnInit(): void {
+    this._peopleService.peoplelist().subscribe(result=>{
+      this.peoplelist=result;
+    })
+  }
+
+}
