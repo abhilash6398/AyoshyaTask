@@ -14,7 +14,6 @@ import { PeopleComponent } from './people/people.component';
   ],
   imports: [
     BrowserModule,
-   // HttpClient,
     HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([

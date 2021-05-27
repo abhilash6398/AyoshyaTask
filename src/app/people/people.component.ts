@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { PeopleService } from '../services/people.service';
+
+@Injectable({ providedIn: 'root' })
 
 @Component({
   selector: 'app-people',
@@ -14,7 +16,10 @@ export class PeopleComponent implements OnInit {
   ngOnInit(): void {
     this._peopleService.peoplelist().subscribe(result=>{
       this.peoplelist=result;
-    })
+    });
+    // .subscribe(result=>{
+    //   this.peoplelist=result;
+    // })
   }
 
 }
