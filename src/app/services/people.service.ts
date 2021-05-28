@@ -1,10 +1,16 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PeopleService {
+  headers= new HttpHeaders({
+    'Access-Control-Allow-Origin':'*',
+    'Authorization':'authkey',
+    'userid':'1'
+  })
+
 
   constructor(private _httpClient: HttpClient){ }
 
